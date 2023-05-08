@@ -52,14 +52,13 @@ body{
 }
 
 .header {
-    padding-bottom: 100px;
-    
+    padding-bottom: 100px;   
 }
 .header__buttons{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    padding-bottom: 32px ;
+    padding-bottom: 32px;
     margin: 0 0 32px 0;
 }
 .header__buttons-style:first-child{
@@ -104,9 +103,13 @@ body{
     font-weight: 700;
 
 }
+.header__img-mobile{
+    display: none;
+}
 .header__img {
     width: 100%;
     height: auto;
+    
 }
 .about{
     height: 506px;
@@ -135,6 +138,7 @@ body{
     justify-content: center;
 }
 .skills__content{
+    
     padding: 91px 0 0 0;
     min-width: 400px;
     width: 66%;
@@ -245,6 +249,58 @@ body{
     color: #828282;
     line-height: 16.98px;
 }
+.burger__button{
+    display: none;
+}
+
+@media screen and (max-width: 400px){
+    .header__text{
+        flex-direction: column;
+        align-items: start;
+        row-gap: 23px;
+        margin-left: 40px;
+    }
+    .header__buttons{
+        display: none;
+    }
+    .header__lang{
+        display: none;
+    }
+    .header__img{
+        display: none;
+    }
+    .header__img-mobile{
+        display: block;
+        background-image: url("./img/header-mobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        align-self: center;
+        height: 478px;
+    }
+    .burger__button{
+        display: block;
+        position: absolute;
+        right: 25px;
+        top:30px;
+
+    }
+    .content{
+        width: 90%;
+    }
+    .skills__content{
+        min-width: 200px;
+    }
+    .skills__soft{
+        display: flex;
+        justify-content: center;
+    }
+    /* .header__img{
+        height: 478px;
+    } */
+    
+    
+}
+
 
 
 
